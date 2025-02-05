@@ -1,1 +1,1 @@
-aa
+##15.01 abbiamo scelto il gioco "Balatro", esso funziona nel seguente modo: nella prima mano si ricevono 8 carte dal mazzo, con la possibilità di presentare fino a 5 carte seguendo le regole del poker. L'obiettivo è quello di giocare queste mani da 5 carte facendo più punti possibili così da poter passare al giro successivo
