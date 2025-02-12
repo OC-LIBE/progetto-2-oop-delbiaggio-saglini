@@ -12,18 +12,25 @@ card_width=10
     
 
 start_button = st.button("Start")
+if "Game started" not in st.session_state:
+    st.session_state["Game started"] = False
 if start_button:
     game1 = Game()
     game1.game_start()
-    hand1 = Hand()
+    st.session_state["Game started"] = True
 
 
     columns = st.columns(7)
 
-    for i in range(1,7):
+    for i in range(0,7):
         with columns[i]:
-            carta = hand1.mano[i]
-            st.image(carta, use_column_width=True)
+            st.session_state["Immagine carta"] = game1.player1.hand.carte[i]
+            st.session_state["Immagine carta"]  = st.image(st.session_state["Immagine carta"].image, use_container_width=True)
+            if st.button("Seleziona carta "+ str(i)):
+                game1.player1.select_card()
+                st.write("carta selezionata ")
+            
+            
 
     
 

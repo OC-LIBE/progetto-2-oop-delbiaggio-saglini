@@ -9,5 +9,5 @@ class Game:
 
     def game_start(self):
         deck = Deck(number_of_decks)
-        deck.shuffle
+        deck.shuffle()
         self.player1.pesca_carte(deck)

@@ -3,10 +3,9 @@ from modules.deck import Deck
 
 class Hand:
     def __init__(self):
-        self.mano:list[Card] = []
+        self.carte:list[Card] = []
 
     def add(self,card):
-        self.mano.append(card)
-
-
-        
+        self.carte.append(card)
+    def remove(self,position):
+        self.carte.remove(position)
