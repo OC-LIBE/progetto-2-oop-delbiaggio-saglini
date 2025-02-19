@@ -7,5 +7,5 @@ class Hand:
 
     def add(self,card):
         self.carte.append(card)
-    def remove(self,position):
-        self.carte.remove(position)
+    def delete(self,card):
+        self.carte.remove(card)

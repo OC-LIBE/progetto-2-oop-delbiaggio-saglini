@@ -32,6 +32,8 @@ class Card:
 
         self.image_location = 'static/images/{}{}.png'.format(
             self.short_rank, self.short_suit)
+    def __str__(self):
+        return f"{self.rank} {self.suit}"
 
     @property
     def image(self):

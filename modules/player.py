@@ -4,19 +4,19 @@ from modules.hand import Hand
 
 class Player:
     def __init__(self):
-        self.selected_cards_positions = []
+        self.selected_cards = []
         self.hand = Hand()
 
 
     def pesca_carte(self,deck):
-        for i in range(0,8):
-            card = deck.draw()
-            self.hand.add(card)
-        return self.hand
-    def select_card(self,posizione):
-        self.selected_cards_positions.append(posizione)
+        card = deck.draw()
+        self.hand.add(card)
+    def select_card(self,card):
+        self.selected_cards.append(card)
+       #print(card)
 
-    def remove_card(self):
-        for i in range(len(self.selected_cards_positions)):
-            self.hand.remove(i)
-        self.selected_cards_positions = []
+    def remove_card(self,deck):
+        for card in self.selected_cards:
+            self.hand.delete(card)
+            self.pesca_carte(deck)
+        self.selected_cards = []
