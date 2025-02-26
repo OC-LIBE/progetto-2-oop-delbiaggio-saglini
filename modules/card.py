@@ -2,10 +2,9 @@ class Card:
     def __init__(self, rank, suit):
         self.rank = rank
         self.suit = suit
+        self.selected = False
         if self.rank == 1:
-            self.card_scores = [1, 11]
-        elif self.rank >= 11 and self.rank <= 13:
-            self.card_scores = [10, 10]
+            self.card_scores = [11, 11]
         else:
             self.card_scores = [self.rank, self.rank]
 
@@ -31,6 +30,8 @@ class Card:
 
         self.image_location = 'static/images/{}{}.png'.format(
             self.short_rank, self.short_suit)
+    def __str__(self):
+        return f"{self.rank} {self.suit}"
 
     @property
     def image(self):
