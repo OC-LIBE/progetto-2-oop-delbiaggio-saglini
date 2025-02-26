@@ -4,9 +4,7 @@ class Card:
         self.suit = suit
         self.selected = False
         if self.rank == 1:
-            self.card_scores = [1, 11]
-        elif self.rank >= 11 and self.rank <= 13:
-            self.card_scores = [10, 10]
+            self.card_scores = [11, 11]
         else:
             self.card_scores = [self.rank, self.rank]
 
