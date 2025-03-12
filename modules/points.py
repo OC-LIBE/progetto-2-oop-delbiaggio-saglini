@@ -4,6 +4,7 @@ from modules.deck import Deck
 class Points:
     def __init__(self):
         self.punteggio = 0
+        self.punteggio_da_raggiungere = 400
 
     def riconoscimento_mani(self,carte_mano):
         scala_carte = sorted(card.card_scores[1] for card in carte_mano)
@@ -39,3 +40,5 @@ class Points:
         is_doublepair = list(value_counts.values()).count(2) == 2
         if is_doublepair:
             self.punteggio = 40
+        else:
+            self.punteggio = 10

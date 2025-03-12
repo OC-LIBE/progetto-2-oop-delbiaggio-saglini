@@ -9,6 +9,8 @@ class Game:
         self.player1 = Player()
         self.deck = Deck(number_of_decks)
         self.logic1 = Points()
+        self.scarti = 5
+        self.mani_da_giocare = 5
 
     def game_start(self):
         self.deck.shuffle()
