@@ -26,10 +26,7 @@ with upper_column1:
         st.session_state["Game started"] = False
 
 if st.session_state["Game started"] == True:
-    
-
-    
-    
+     
     columns = st.columns(8)
     for i in range(len(st.session_state["Game1"].player1.hand.carte)):
         with columns[i]:
@@ -48,7 +45,7 @@ if st.session_state["Game started"] == True:
             if st.session_state["Game1"].scarti > 0:
                 if st.button("Scarta",use_container_width=True):
                     st.session_state["Game1"].player1.remove_card(st.session_state["Game1"].deck)
-                    print(st.session_state["Game1"].player1.hand)
+                    
                     st.session_state["Game1"].scarti = st.session_state["Game1"].scarti - 1
                     st.rerun()
         with subcol2:
@@ -67,26 +64,3 @@ if st.session_state["Game started"] == True:
         
     with upper_column4:
         st.header("Punteggio da raggiungere: " + str(st.session_state["Game1"].logic1.punteggio_da_raggiungere))
-
-    
-
-
-            
-            
-
-    
-
-
-
-        
-
-
-
-    
-
-
-
-
-
-
-
