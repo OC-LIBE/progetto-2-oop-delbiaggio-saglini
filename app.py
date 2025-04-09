@@ -46,7 +46,7 @@ if st.session_state["Game started"] == True:
                 if st.button("Scarta",use_container_width=True):
                     st.session_state["Game1"].player1.remove_card(st.session_state["Game1"].deck)
                     
-                    st.session_state["Game1"].scarti = st.session_state["Game1"].scarti - 1
+                    st.session_state["Game1"].scarti = st.session_state["Game1"].scarti - 1 
                     st.rerun()
         with subcol2:
             if st.session_state["Game1"].mani_da_giocare > 0:
@@ -56,11 +56,11 @@ if st.session_state["Game started"] == True:
                     st.session_state["Punteggio"] += st.session_state["Game1"].logic1.punteggio
                     st.session_state["Game1"].mani_da_giocare = st.session_state["Game1"].mani_da_giocare - 1
                     st.rerun()
-     
+                
     with upper_column3:
         st.header("Punteggio: " +  str(st.session_state["Punteggio"]))
         st.header("Mani rimanenti: " + str(st.session_state["Game1"].mani_da_giocare))
         st.header("scarti rimanenti: " + str(st.session_state["Game1"].scarti))
-        
+
     with upper_column4:
         st.header("Punteggio da raggiungere: " + str(st.session_state["Game1"].logic1.punteggio_da_raggiungere))
