@@ -39,6 +39,6 @@ class Points:
         is_doublepair = list(value_counts.values()).count(2) == 2
         if is_doublepair:
             self.punteggio = 40
-        else:
-            self.punteggio = 10
-        print(value_counts)
+        
+        
+        

@@ -54,6 +54,7 @@ if st.session_state["Game started"] == True:
                     st.session_state["Game1"].logic1.riconoscimento_mani(st.session_state["Game1"].player1.selected_cards)
                     st.session_state["Game1"].player1.remove_card(st.session_state["Game1"].deck)
                     st.session_state["Punteggio"] += st.session_state["Game1"].logic1.punteggio
+                    st.session_state["Game1"].logic1.punteggio = 0
                     st.session_state["Game1"].mani_da_giocare = st.session_state["Game1"].mani_da_giocare - 1
                     st.rerun()
                 
