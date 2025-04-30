@@ -65,3 +65,5 @@ if st.session_state["Game started"] == True:
 
     with upper_column4:
         st.header("Punteggio da raggiungere: " + str(st.session_state["Game1"].logic1.punteggio_da_raggiungere))
+
+#prova
