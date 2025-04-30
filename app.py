@@ -27,8 +27,6 @@ with upper_column1:
 
 if st.session_state["Game started"] == True:
     
-
-    
     
     columns = st.columns(8)
     for i in range(len(st.session_state["Game1"].player1.hand.carte)):
@@ -67,26 +65,4 @@ if st.session_state["Game started"] == True:
         
     with upper_column4:
         st.header("Punteggio da raggiungere: " + str(st.session_state["Game1"].logic1.punteggio_da_raggiungere))
-
-    
-
-
-            
-            
-
-    
-
-
-
-        
-
-
-
-    
-
-
-
-
-
-
 
